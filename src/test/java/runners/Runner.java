@@ -19,9 +19,9 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@",
+        tags = "@forms_app_portuguese_page_test",
 
-        dryRun = false
+        dryRun = true
 )
 public class Runner {
 
