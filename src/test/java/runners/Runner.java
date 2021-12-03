@@ -1,11 +1,9 @@
 package runners;
 
-import io.cucumber.java.en.*;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.By;
-import utilities.Driver;
+
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -19,9 +17,9 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@forms_app_portuguese_page_test",
+        tags = "@forms_app_positive_test_english_form",
 
-        dryRun = true
+        dryRun = false
 )
 public class Runner {
 
