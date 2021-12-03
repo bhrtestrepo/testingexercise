@@ -1,0 +1,10 @@
+There are three feature files in the 'features' folder.
+
+The test cases can be executed in 2 ways:
+1. By clicking the green run icon in the feature files
+2. By passing the tags inside Runner class
+
+I got PASS from every test.
+Actually, from the test on the portuguese page, I should have gotten FAIL
+as there is no success message, but appears an error message, so I asserted
+the main header and got a PASS from the test. I reported the error message as a defect.

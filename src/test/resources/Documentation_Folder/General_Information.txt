@@ -1,0 +1,20 @@
+    In this assessment, I tried to implement an exploratory testing as I didn't have
+the required documentation for the application.
+
+    First, I tested the application manually to be able to understand the functionalities
+and behavior of it. I encountered various defects which are reported inside the
+"Test Strategy - Test Plan" Excel document together with the screenshots.
+
+    Then I created my Cucumber Framework based on Page Object Model. I put all locators inside the Pages
+classes. I wrote all my test cases in Gherkin Language inside the files in the "features folder".
+Then I created step definitions and implemented my codes.
+
+    I created only 3 tests. I did not automate every field in the form application. I tested manually all fields.
+There could have been many more tests to automate for it, but as the assessment asked for 2 tests, I added one more.
+
+    I was able to locate the necessary fields that were tested but the html code should have been more
+specific with unique attributes to get a good locator. Some attributes are too long, or have dynamic values.
+
+    I created also a public repository in GitHub and pushed my framework firstly. Then I created my own
+branch and committed the changes from my local branch to the one in the remote, afterwards, I created a
+pull request and merged my codes with the main branch codes.

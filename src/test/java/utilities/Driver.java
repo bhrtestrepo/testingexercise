@@ -12,6 +12,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 public class Driver {
+
+    //I added some useful methods inside this class in case I needed to use. They could stay also in a
+    //separate class for Reusable Methods. In my case, I did not use many of them.
+
     private static int timeout = 5;
      private Driver(){
     }
