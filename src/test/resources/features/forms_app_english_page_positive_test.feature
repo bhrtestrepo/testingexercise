@@ -16,6 +16,6 @@ Feature: User should enter required information on the forms application
     Then user closes the application
 
     Examples:
-      | name      | date_of_birth | text            |
-      | Mary Jane | 2021 12 14    | This is a test. |
+      | name      | date_of_birth   | text            |
+      | Mary Jane | Wed Dec 01 2021 | This is a test. |
 

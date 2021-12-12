@@ -16,13 +16,13 @@ public class Forms_Portuguese_Step_Definitions {
     }
     @Then("user enters name {string} in portuguese page")
     public void user_enters_name_in_portuguese_page(String name) {
-        formsPortuguesePage.nameBox.sendKeys("Loren Williams");
+        Driver.waitAndSendText(formsPortuguesePage.nameBox,"Loren Williams");
     }
     @Then("user enters date of birth {string} in portuguese page")
     public void user_enters_date_of_birth_in_portuguese_page(String dateOfBirth) {
-       Driver.wait(2);
-       formsPortuguesePage.dateButtonClick.click();
-       formsPortuguesePage.dateOfBirthButton.click();
+
+       Driver.waitAndClick(formsPortuguesePage.dateButtonClick);
+       Driver.waitAndClick(formsPortuguesePage.dateOfBirthButton);
     }
     @Then("user enters a text {string} in the box in portuguese page")
     public void user_enters_a_text_in_the_box_in_portuguese_page(String text) {
@@ -34,11 +34,12 @@ public class Forms_Portuguese_Step_Definitions {
     }
     @Then("user verifies success message in portuguese page")
     public void user_verifies_success_message_in_portuguese_page() {
-        Assert.assertTrue(formsPortuguesePage.headerText.getText().equals("Este é um Liferay Forms"));
+        //Assert.assertTrue(formsPortuguesePage.headerText.getText().equals("Este é um Liferay Forms"));
 
         //In our case, one example for the real assertion should have been as below if we could have seen the success message.
         //Assert.assertFalse(formsPortuguesePage.headerText.getText().equals("Este é um Liferay Forms"));
 
+        Assert.assertTrue(formsPortuguesePage.successMessageText.isDisplayed());
     }
 
 

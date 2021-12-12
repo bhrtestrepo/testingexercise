@@ -23,7 +23,7 @@ public class FormsPortuguesePage {
     @FindBy(xpath = "//button[@class='date-picker-dropdown-toggle btn btn-unstyled']")
     public WebElement dateButtonClick;
 
-    @FindBy(xpath = "//button[@aria-label='2021 12 14']")
+    @FindBy(css = "button[aria-label='Wed Dec 01 2021']")
     public WebElement dateOfBirthButton;
 
     @FindBy(xpath = "//textarea[@class='ddm-field-text form-control']")
@@ -32,7 +32,10 @@ public class FormsPortuguesePage {
     @FindBy(xpath = "//button[@id='ddm-form-submit']")
     public WebElement submitButton;
 
-    @FindBy(xpath = "//h1[contains(text(),'Information sent')]")
+//    @FindBy(xpath = "//h1[contains(text(),'Information sent')]")
+//    public WebElement successMessageText;
+
+    @FindBy(xpath = "//h1[@class='ddm-form-name']")
     public WebElement successMessageText;
 
     @FindBy(id = "ToastAlertContainer")
