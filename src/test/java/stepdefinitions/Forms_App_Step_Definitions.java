@@ -27,15 +27,18 @@ public class Forms_App_Step_Definitions {
 
     @Then("user enters name {string}")
     public void user_enters_name(String name) {
-        formsEnglishPage.nameBox.sendKeys("Mary Jane");
+        formsEnglishPage.nameBox.sendKeys(name);
 
     }
 
     @Then("user enters date of birth {string}")
     public void user_enters_date_of_birth(String dateOfBirth) {
-        Driver.wait(2);
-        formsEnglishPage.dateButtonClick.click();
-        formsEnglishPage.dateOfBirthButton.click();
+//        Driver.wait(5);
+//        formsEnglishPage.dateButtonClick.click();
+//        formsEnglishPage.dateOfBirthButton.click();
+
+        Driver.waitAndClick(formsEnglishPage.dateButtonClick);
+        Driver.waitAndClick(formsEnglishPage.dateOfBirthButton);
         //I tried to use different formats to choose the date, but only with this method I could automate it.
 
     }
@@ -52,7 +55,8 @@ public class Forms_App_Step_Definitions {
 
     @Then("user verifies success message")
     public void user_verifies_success_message() {
-        Driver.wait(2);
+        //Driver.wait(2);
+        Driver.waitForVisibility(formsEnglishPage.successMessageText, 2);
         Assert.assertTrue(formsEnglishPage.successMessageText.isDisplayed());
 
     }
@@ -73,8 +77,8 @@ public class Forms_App_Step_Definitions {
     }
 
     @Then("user enters name3 {string}")
-    public void user_enters_name3(String name2) {
-        formsPortuguesePage.nameBox.sendKeys(name2);
+    public void user_enters_name3(String name3) {
+        formsPortuguesePage.nameBox.sendKeys(name3);
     }
 
     @Then("user enters a future date of birth {string}")

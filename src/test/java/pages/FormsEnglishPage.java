@@ -19,10 +19,17 @@ public class FormsEnglishPage {
     @FindBy(xpath = "//button[@class='date-picker-dropdown-toggle btn btn-unstyled']")
     public WebElement dateButtonClick;
 
-    @FindBy(xpath = "//button[@aria-label='2021 12 14']")
+    //these locators are changed, I've found new locators below
+//    @FindBy(xpath = "//button[@aria-label='2021 12 14']")
+//    public WebElement dateOfBirthButton;
+//
+//    @FindBy(xpath = "//button[@aria-label='2026 12 23']")
+//    public WebElement futureDate;
+
+    @FindBy(css = "button[aria-label='Wed Dec 01 2021']")
     public WebElement dateOfBirthButton;
 
-    @FindBy(xpath = "//button[@aria-label='2026 12 23']")
+    @FindBy(css = "button[aria-label='Fri Dec 31 2021']")
     public WebElement futureDate;
 
     @FindBy(xpath = "//textarea[@class='ddm-field-text form-control']")
@@ -31,8 +38,11 @@ public class FormsEnglishPage {
     @FindBy(xpath = "//button[@id='ddm-form-submit']")
     public WebElement submitButton;
 
-    @FindBy(xpath = "//h1[contains(text(),'Information sent')]")
+//    @FindBy(xpath = "//h1[contains(text(),'Information sent')]")
+//    public WebElement successMessageText;
+    @FindBy(xpath = "//h1[@class='ddm-form-name']")
     public WebElement successMessageText;
+
 
     @FindBy(id = "uvlz____")
     public WebElement englishButton;

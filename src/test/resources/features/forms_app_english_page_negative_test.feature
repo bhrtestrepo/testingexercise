@@ -7,8 +7,8 @@ Feature: User should enter invalid information on the forms application and get 
     Then user verifies "This is a Liferay Forms" title
 
   @invalid_info_test
-  Scenario Outline:
-    And user enters name2 "<name2>"
+  Scenario Outline: Negative test case
+    And user enters name3 "<name3>"
     And user enters a future date of birth "<future_date_of_birth>"
     And user enters a text with "<text_with_special_char_and_number>" in the box
     And user clicks submit button
@@ -16,5 +16,5 @@ Feature: User should enter invalid information on the forms application and get 
     Then user closes the application
 
     Examples:
-      | name2   | future_date_of_birth | text_with_special_char_and_number |
-      | F-0sl./ | 2026 12 23           | This-is-1-test!                   |
+      | name3   | future_date_of_birth | text_with_special_char_and_number |
+      | F-0sl./ | Fri Dec 31 2021      | This-is-1-test!                   |

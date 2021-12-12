@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@forms_app_positive_test_english_form",
+        tags = "@forms_app_negative_test_english_form",
 
         dryRun = false
 )
